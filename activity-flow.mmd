@@ -1,0 +1,20 @@
+graph TD
+    A[Start: User wants to log activity] --> B{Choose Existing or Add New Activity?};
+
+    B -- "Option: Existing" --> C1[Select Activity Name];
+    B -- "Option: Add New" --> C2[Type New Activity Name];
+
+    C1 --> D[Rate Activity on Dimensions];
+    C2 --> D;
+
+    D --> E_EE[Set Energy/Effort 1-5];
+    D --> E_PF[Set Productivity/Fulfillment 1-5];
+    D --> E_SE[Set Social Engagement 1-5];
+
+    E_EE --> F[Dimensions Rated];
+    E_PF --> F;
+    E_SE --> F;
+
+    F --> G[Optional: Log Mood];
+    G --> H[Optional: Add Notes];
+    H --> I[End: Activity Data Stored];
