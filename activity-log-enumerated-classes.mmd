@@ -1,0 +1,42 @@
+classDiagram
+    class ActivityLogEntry {
+        +DateTime logTimestamp
+        +String activityName
+        +int energyEffort_EE (1-5)
+        +int productivityFulfillment_PF (1-5)
+        +int socialEngagement_SE (1-5)
+        +int moodRating (e.g., 1-10)
+        +String notes (optional)
+        +int activityID (Unique Identifier)
+    }
+
+    class Dimension_EnergyEffort {
+        <<enum>>
+        +1: Restorative/Low Effort
+        +2: Low-Moderate Effort
+        +3: Moderate Effort/Neutral
+        +4: High Effort/Demanding
+        +5: Draining/Depleting
+    }
+
+    class Dimension_ProductivityFulfillment {
+        <<enum>>
+        +1: Detrimental/Unproductive
+        +2: Neutral/Maintenance
+        +3: Mildly Productive/Self-Care
+        +4: Productive/Meaningful
+        +5: Highly Fulfilling/Peak Performance
+    }
+
+    class Dimension_SocialEngagement {
+        <<enum>>
+        +1: Isolated/Alone (Undesired)
+        +2: Solitude (Desired/Neutral)
+        +3: Casual Interaction
+        +4: Meaningful Interaction
+        +5: Highly Social/Community
+    }
+
+    ActivityLogEntry "1" *-- "1" Dimension_EnergyEffort : has_EE
+    ActivityLogEntry "1" *-- "1" Dimension_ProductivityFulfillment : has_PF
+    ActivityLogEntry "1" *-- "1" Dimension_SocialEngagement : has_SE
