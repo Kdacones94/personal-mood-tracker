@@ -1,4 +1,10 @@
 # Activity Log
+> THIS IS A WORK IN PROGRESS. Currently working on formatting the documentation and deciding if I should use some of the documentation for content or share right away. But it's done! 
+
+I created my own system for processing my tasks and activities and rating them based on my goals, values, and interests to help me gauge whether or not I should pursue a task or not. 
+
+this one is for all the indecisive adhd asd people who can't ever choose.  
+
 
 ## Creating an Activity Log 
 > This activity log will contain the information that will be stored and used to help track my moods and activities throughout the day
